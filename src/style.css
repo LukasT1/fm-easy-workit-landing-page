@@ -1,36 +1,40 @@
-@use "variables";
+:root {
+  --color-primary: #24053e;
+  --font-heading: "Fraunces", serif;
+  --font-body: "Manrope", sans-serif;
+}
 
 @font-face {
   font-family: "Fraunces";
-  src: url("/dist/assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf")
-    format("truetype");
+  src: url("/dist/assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Manrope";
-  src: url("/dist/assets/fonts/manrope/static/Manrope-Regular.ttf")
-    format("truetype");
+  src: url("/dist/assets/fonts/manrope/static/Manrope-Regular.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
-
 h1 {
   font-family: var(--font-heading);
   font-size: 8rem;
   font-weight: 600;
   line-height: 8rem;
 }
+
 h2 {
   font-family: var(--font-heading);
   font-size: 5.6rem;
   font-weight: 600;
   line-height: 6.4rem;
 }
+
 h3 {
   font-family: var(--font-heading);
   font-size: 3.2rem;
   font-weight: 600;
   line-height: 4rem;
 }
+
+/*# sourceMappingURL=style.css.map */
