@@ -1,5 +1,29 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 65.5%;
+}
+
 :root {
-  --color-primary: #24053e;
+  --color-dark-purple: #24053e;
+  --color-eucalyptus: #44ffa1;
+  --color-davys-grey: #584d62;
+  --color-ghost-white: #fcf8ff;
+  --color-white: #ffffff;
   --font-heading: "Fraunces", serif;
   --font-body: "Manrope", sans-serif;
 }
@@ -35,6 +59,12 @@ h3 {
   font-size: 3.2rem;
   font-weight: 600;
   line-height: 4rem;
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  line-height: 3.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
