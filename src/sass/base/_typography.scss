@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Manrope";
-  src: url("/dist/assets/fonts/manrope/static/Manrope-Regular.ttf")
+  src: url("/dist/assets/fonts/manrope/static//Manrope-VariableFont_wght.ttf")
     format("truetype");
   font-weight: 100 900;
   font-style: normal;
@@ -39,4 +39,18 @@ p {
   font-family: var(--font-body);
   font-size: 1.8rem;
   line-height: 3.2rem;
+}
+
+.text--underline {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8.5rem;
+    height: 0.4rem;
+    width: 100%;
+    background-color: var(--color-eucalyptus);
+  }
 }

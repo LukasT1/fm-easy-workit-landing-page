@@ -18,6 +18,10 @@ html {
   font-size: 65.5%;
 }
 
+body {
+  max-width: 100vw;
+}
+
 :root {
   --color-dark-purple: #24053e;
   --color-eucalyptus: #44ffa1;
@@ -36,7 +40,7 @@ html {
 }
 @font-face {
   font-family: "Manrope";
-  src: url("/dist/assets/fonts/manrope/static/Manrope-Regular.ttf") format("truetype");
+  src: url("/dist/assets/fonts/manrope/static//Manrope-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
@@ -65,6 +69,96 @@ p {
   font-family: var(--font-body);
   font-size: 1.8rem;
   line-height: 3.2rem;
+}
+
+.text--underline {
+  position: relative;
+}
+.text--underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8.5rem;
+  height: 0.4rem;
+  width: 100%;
+  background-color: var(--color-eucalyptus);
+}
+
+.mb-sm {
+  margin-bottom: 1rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mb-lg {
+  margin-bottom: 5rem;
+}
+
+.mb-xl {
+  margin-bottom: 8rem;
+}
+
+.btn--primary {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-dark-purple);
+  background-color: var(--color-eucalyptus);
+  padding: 1.3rem 2.5rem;
+  border: 0.2rem solid rgba(0, 0, 0, 0);
+  outline: none;
+}
+.btn--primary:hover {
+  background-color: var(--color-dark-purple);
+  color: var(--color-eucalyptus);
+  border: 0.2rem solid var(--color-eucalyptus);
+}
+
+.btn--secondary {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-white);
+  border: none;
+  outline: none;
+  padding: 0.5rem 0rem;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 0.3rem solid var(--color-eucalyptus);
+}
+.btn--secondary:hover {
+  color: var(--color-eucalyptus);
+}
+
+.header {
+  background: url("assets/images/bg-pattern-1.svg") no-repeat -10% 15%, url("assets/images/bg-pattern-2.svg") no-repeat 102% 40%, var(--color-dark-purple);
+  background-size: 20vw, 10vw, cover;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 5rem 15rem;
+}
+.header__logo {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.header__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__heading-h1 {
+  text-align: center;
+  color: var(--color-white);
+}
+.header__heading-btn {
+  display: inline;
+}
+.header__hero-img {
+  width: 50vw;
 }
 
 /*# sourceMappingURL=style.css.map */
