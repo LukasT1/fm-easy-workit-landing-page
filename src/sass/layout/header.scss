@@ -6,7 +6,7 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding: 5rem 15rem 30rem;
+  padding: 5rem 20rem 30rem;
 
   &::before {
     position: absolute;
@@ -44,7 +44,7 @@
   }
   &__hero-img {
     position: absolute;
-    top: 42%;
+    top: 50%;
     width: 50vw;
 
     // transform: translateY(50%);

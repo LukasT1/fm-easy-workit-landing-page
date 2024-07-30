@@ -40,7 +40,7 @@ body {
 }
 @font-face {
   font-family: "Manrope";
-  src: url("/dist/assets/fonts/manrope/static//Manrope-VariableFont_wght.ttf") format("truetype");
+  src: url("/dist/assets/fonts/manrope/Manrope-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
@@ -135,7 +135,7 @@ p {
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding: 5rem 15rem 30rem;
+  padding: 5rem 20rem 30rem;
 }
 .header::before {
   position: absolute;
@@ -168,7 +168,7 @@ p {
 }
 .header__hero-img {
   position: absolute;
-  top: 42%;
+  top: 50%;
   width: 50vw;
 }
 
@@ -176,14 +176,15 @@ p {
   display: flex;
   flex-direction: row;
   margin-top: 25rem;
-  padding: 0rem 15rem 20rem;
+  padding: 0rem 20rem 20rem;
 }
 .main::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 0;
   background-color: var(--color-ghost-white);
+  clip-path: ellipse(101vw 50% at 50% 50%);
   width: 100%;
   height: 100%;
   z-index: -50;
@@ -211,6 +212,34 @@ p {
 }
 .main__item-heading {
   margin-bottom: 3rem;
+}
+.founder {
+  padding: 5rem 30rem;
+  display: grid;
+  grid-template-columns: 40% 2fr;
+  position: relative;
+}
+.founder__photo {
+  width: 100%;
+  height: auto;
+  grid-column: 1/2;
+}
+.founder__photo-img {
+  width: 100%;
+}
+.founder__message {
+  position: absolute;
+  top: 35%;
+  left: -10%;
+  grid-column: 2/-1;
+  padding: 5rem 10rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3rem;
+  align-items: start;
+  background: url("assets/images/bg-pattern-3.svg") no-repeat 85% 140%;
+  background-color: var(--color-dark-purple);
+  color: var(--color-white);
 }
 
 /*# sourceMappingURL=style.css.map */
