@@ -1,15 +1,26 @@
 @use "../base/variables";
 
 .header {
-  background: url("assets/images/bg-pattern-1.svg") no-repeat -10% 15%,
-    url("assets/images/bg-pattern-2.svg") no-repeat 102% 40%,
-    var(--color-dark-purple);
-  background-size: 20vw, 10vw, cover;
+  //   clip-path: ellipse(100% 15% at 50% 70%);
+
   display: flex;
   flex-flow: column;
   align-items: center;
+  padding: 5rem 15rem 30rem;
 
-  padding: 5rem 15rem;
+  &::before {
+    position: absolute;
+    top: -1%;
+    width: 100vw;
+    height: 100vh;
+    background: url("assets/images/bg-pattern-1.svg") no-repeat -10% 15%,
+      url("assets/images/bg-pattern-2.svg") no-repeat 102% 40%,
+      var(--color-dark-purple);
+    background-size: 20vw, 10vw, cover;
+    content: "";
+    clip-path: ellipse(180rem 55rem at 40% 20%);
+    z-index: -10;
+  }
 
   &__logo {
     width: 100%;
@@ -32,6 +43,10 @@
     }
   }
   &__hero-img {
+    position: absolute;
+    top: 42%;
     width: 50vw;
+
+    // transform: translateY(50%);
   }
 }
