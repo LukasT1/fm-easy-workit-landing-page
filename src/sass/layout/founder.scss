@@ -1,12 +1,40 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+
 .founder {
-  padding: 5rem 30rem;
+  padding: 5rem 15rem;
   display: grid;
-  grid-template-columns: 40% 2fr;
+  grid-template-columns: 45% 1fr;
   position: relative;
+
+  @include respond-to($bp-1024) {
+    grid-template-columns: 40% 1fr;
+    padding-left: var(--padding-medium);
+    padding-right: var(--padding-medium);
+  }
+
+  @include respond-to($bp-768) {
+    padding-left: var(--padding-small);
+    padding-right: var(--padding-small);
+  }
+
+  @include respond-to($bp-550) {
+    margin-top: 5rem;
+    padding-left: var(--padding-xsmall);
+    padding-right: var(--padding-xsmall);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr min-content;
+  }
+
   &__photo {
     width: 100%;
     height: auto;
     grid-column: 1 / 2;
+
+    @include respond-to($bp-550) {
+      grid-column: auto;
+      grid-row: 1/2;
+    }
 
     &-img {
       width: 100%;
@@ -14,9 +42,8 @@
   }
 
   &__message {
-    position: absolute;
-    top: 35%;
-    left: -10%;
+    margin-top: 17rem;
+    margin-left: -10rem;
     grid-column: 2 / -1;
     padding: 5rem 10rem;
     display: flex;
@@ -26,6 +53,22 @@
     background: url("assets/images/bg-pattern-3.svg") no-repeat 85% 140%;
     background-color: var(--color-dark-purple);
     color: var(--color-white);
+
+    @include respond-to($bp-1024) {
+      margin-top: 20rem;
+      margin-left: -15rem;
+    }
+
+    @include respond-to($bp-550) {
+      margin: 0;
+      padding: 5rem 6rem;
+      margin-top: -10rem;
+      grid-column: auto;
+      grid-row: 2/3;
+      text-align: center;
+      align-items: center;
+    }
+
     &-heading {
     }
     &-text {

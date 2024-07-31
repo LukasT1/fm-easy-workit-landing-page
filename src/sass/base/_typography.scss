@@ -1,4 +1,5 @@
-@use "variables";
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
 
 @font-face {
   font-family: "Fraunces";
@@ -21,24 +22,61 @@ h1 {
   font-size: 8rem;
   font-weight: 600;
   line-height: 8rem;
+
+  @include respond-to($bp-768) {
+    font-size: 7.5rem;
+  }
+
+  @include respond-to($bp-550) {
+    font-size: 6.25rem;
+  }
 }
 h2 {
   font-family: var(--font-heading);
   font-size: 5.6rem;
   font-weight: 600;
   line-height: 6.4rem;
+
+  @include respond-to($bp-768) {
+    font-size: 6rem;
+  }
+
+  @include respond-to($bp-550) {
+    font-size: 4rem;
+  }
 }
 h3 {
   font-family: var(--font-heading);
   font-size: 3.2rem;
   font-weight: 600;
   line-height: 4rem;
+
+  @include respond-to($bp-768) {
+    font-size: 3.5rem;
+  }
 }
 
 p {
   font-family: var(--font-body);
   font-size: 1.8rem;
   line-height: 3.2rem;
+
+  @include respond-to($bp-1024) {
+    font-size: 2rem;
+  }
+}
+
+.line-break::after {
+  content: "";
+  display: inline;
+}
+
+@media (min-width: $bp-768) {
+  /* Adjust the width as needed */
+  .line-break::after {
+    content: "\A"; /* Inserts a line break */
+    white-space: pre; /* Ensures the line break is respected */
+  }
 }
 
 .text--underline {
@@ -52,5 +90,12 @@ p {
     height: 0.4rem;
     width: 100%;
     background-color: var(--color-eucalyptus);
+
+    @include respond-to($bp-550) {
+      top: 7rem;
+    }
+    @include respond-to($bp-400) {
+      top: 6.5rem;
+    }
   }
 }

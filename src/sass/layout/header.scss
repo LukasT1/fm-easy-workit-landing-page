@@ -1,25 +1,54 @@
-@use "../base/variables";
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
 
 .header {
-  //   clip-path: ellipse(100% 15% at 50% 70%);
-
+  padding-top: var(--padding-small);
+  padding-bottom: var(--padding-xlarge);
+  padding-left: var(--padding-large);
+  padding-right: var(--padding-large);
+  background: url("assets/images/bg-pattern-1.svg") no-repeat -10% 15%,
+    url("assets/images/bg-pattern-2.svg") no-repeat 102% 40%,
+    var(--color-dark-purple);
+  background-size: 20%, 12%, cover;
+  border-bottom-left-radius: 80% 12%;
+  border-bottom-right-radius: 80% 12%;
+  overflow: hidden;
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding: 5rem 20rem 30rem;
 
-  &::before {
+  @include respond-to($bp-1024) {
+    padding-left: var(--padding-medium);
+    padding-right: var(--padding-medium);
+  }
+
+  @include respond-to($bp-768) {
+    padding-left: var(--padding-small);
+    padding-right: var(--padding-small);
+  }
+
+  @include respond-to($bp-550) {
+    padding-left: var(--padding-xsmall);
+    padding-right: var(--padding-xsmall);
+    padding-bottom: var(--padding-large);
+  }
+
+  &__hero-img {
+    top: 40rem;
     position: absolute;
-    top: -1%;
-    width: 100vw;
-    height: 100vh;
-    background: url("assets/images/bg-pattern-1.svg") no-repeat -10% 15%,
-      url("assets/images/bg-pattern-2.svg") no-repeat 102% 40%,
-      var(--color-dark-purple);
-    background-size: 20vw, 10vw, cover;
-    content: "";
-    clip-path: ellipse(180rem 55rem at 40% 20%);
-    z-index: -10;
+    margin-top: 5rem;
+    width: 75vw;
+    max-width: 75rem;
+    z-index: 50;
+
+    @include respond-to($bp-768) {
+      margin-top: 8rem;
+      width: 85vw;
+    }
+    @include respond-to($bp-550) {
+      margin-top: 4rem;
+      width: 90vw;
+    }
   }
 
   &__logo {
@@ -41,12 +70,5 @@
     &-btn {
       display: inline;
     }
-  }
-  &__hero-img {
-    position: absolute;
-    top: 50%;
-    width: 50vw;
-
-    // transform: translateY(50%);
   }
 }

@@ -9,4 +9,16 @@
   //Fonts
   --font-heading: "Fraunces", serif;
   --font-body: "Manrope", sans-serif;
+
+  //Padding
+  --padding-xlarge: 25rem;
+  --padding-large: 15rem;
+  --padding-medium: 10rem;
+  --padding-small: 5rem;
+  --padding-xsmall: 2rem;
 }
+
+$bp-1024: 1024px;
+$bp-768: 768px;
+$bp-550: 550px;
+$bp-400: 400px;
