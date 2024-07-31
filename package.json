@@ -1,17 +1,19 @@
 {
   "name": "2024-07-23-workit-landing-page",
   "version": "1.0.0",
-  "description": "",
+  "description": "Landing page for Workit",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass src/sass/main.scss dist/style.css",
+    "compile:sass": "sass src/sass/main.scss src/style.css",
+    "watch:sass": "sass src/sass/main.scss src/style.css -w",
+    "prefix:css": "postcss src/style.css --output dist/style.prefix.css",
+    "minify:css": "postcss dist/style.prefix.css --use cssnano --output dist/style.css",
+    "copy-html": "cp src/index.html dist/index.html",
     "devserver": "live-server --browser=chrome",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "prefix:css": "postcss dist/style.css --output dist/style.prefix.css",
-    "minify:css": "postcss dist/style.prefix.css --use cssnano --output dist/style.min.css",
-    "watch:sass": "node-sass src/sass/main.scss dist/style.css -w",
-    "copy-html": "cp index.html dist/",
-    "build": "npm-run-all compile:sass copy-html prefix:css minify:css"
+    "copy-assets": "cp -r src/assets/ dist/assets/",
+    "clean": "rimraf dist/style.prefix.css dist/style.prefix.css.map",
+    "build": "npm-run-all compile:sass copy-assets prefix:css minify:css copy-html clean"
   },
   "keywords": [],
   "author": "Lukas Trnka",
@@ -20,9 +22,10 @@
     "autoprefixer": "^10.4.19",
     "cssnano": "^7.0.4",
     "live-server": "^1.2.2",
-    "node-sass": "^9.0.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.39",
-    "postcss-cli": "^11.0.0"
+    "postcss-cli": "^11.0.0",
+    "rimraf": "^5.0.1",
+    "sass": "^1.77.8"
   }
 }
