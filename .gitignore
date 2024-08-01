@@ -2,7 +2,6 @@
 node_modules/
 
 # Compiled CSS
-dist/style.css
 dist/style.prefix.css
 dist/style.min.css
 
