@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/LukasT1/fm-easy-workit-landing-page)
+- Live Site URL: [Add live site URL here](https://lukast1.github.io/fm-easy-workit-landing-page/)
 
 ## My process
 
