@@ -49,7 +49,11 @@ After following many courses (thanks to Jonas Schmedtmann) on HTML, CSS, and Jav
 
 I learned a lot during this process.
 
-I struggled quite a bit with setting up my project, downloading and configuring all the dependencies, and figuring out the right structure for my files. This might have been overkill for such a small project, but I wanted to try it since I used these tools during the courses.
+I struggled quite a bit with setting up my project, downloading and configuring all the dependencies, and figuring out the right structure for my files.
+
+After my first attemp I decided to redo the whole thing relying more on CSS Grid which made my life a lot easier.
+
+Still I struggled with making the backgrounds of different section fit, figuring out how the clip path property and positiong the pseudo elements. In the end I am quite happy how this turned out.
 
 My main weakness is organizing the code. Despite my efforts, I ended up with spaghetti code. This is something I need to improve in the future.
 
